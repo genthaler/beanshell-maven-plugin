@@ -1,0 +1,82 @@
+/*
+ * #%L
+ * Beanshell Maven Plugin
+ * %%
+ * Copyright (C) 2014 Günther Enthaler
+ * %%
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ * 
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ * 
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ * #L%
+ */
+/**
+ * Run an arbitrary BeanShell script.
+ *
+ * The script runs in the same interpreter that runs the BeanShell mojo, so has access to the Maven project object.
+ *
+ * @goal run
+ */
+
+import org.apache.maven.plugin.Mojo;
+import org.apache.maven.script.beanshell.BeanshellMojoAdapter;
+import org.apache.maven.project.MavenProject;
+
+execute()
+{
+    logger.info( "Executing Script" );
+    logger.info("file class " + file.getClass().getName());
+    logger.info("script class " + script.getClass().getName());
+
+    if (project.getClass() == MavenProject.class) {
+    	this.interpreter.set("project", project);
+    }
+
+    if (file.getClass() == String.class) {
+        logger.info( "interpreting file " + file);
+    	this.interpreter.source(file);
+    } else if (script.getClass() == String.class) {
+        logger.info( "evaluating script " + script);
+    	this.interpreter.eval(script);
+    }
+}
+
+/**
+ * The literal script to be executed.
+ *
+ * @parameter expression="${bsh.script}" type="java.lang.String"
+ */
+setScript( String s )
+{
+    script = s;
+}
+
+/**
+ * A BeanShell file containing the script to run.
+ *
+ * @parameter expression="${bsh.file}" type="java.io.File"
+ */
+setFile( File f )
+{
+    file = f;
+}
+
+/**
+ * The containing MavenProject, if any. Provided as a convenience.
+ *
+ * @parameter expression="${project}" type="org.apache.maven.project.MavenProject" default-value="${project}"
+ * @readonly
+ */
+setProject( MavenProject p )
+{
+	project = p;
+}
+
+return new BeanshellMojoAdapter( (Mojo) this, this.interpreter );

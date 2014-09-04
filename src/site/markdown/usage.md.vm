@@ -1,0 +1,42 @@
+Usage
+-----
+
+Have a look at the [integration tests](${project.scm.url}/blob/master/src/it/) for some ideas.
+
+The execution of this plugin&apos;s goal can be bound to a phase of the build lifecycle, in this example the test phase.
+
+	<project>
+	  [...]
+	  <build>
+	    [...]
+	    <plugins>
+	      [...]
+	      <plugin>
+	        <groupId>${project.groupId}</groupId>
+	        <artifactId>${project.artifactId}</artifactId>
+	        <version>${project.version}</version>
+	        <executions>
+	          <execution>
+	            <phase>test</phase>
+	            <goals>
+	              <goal>run</goal>
+	            </goals>
+	            <configuration>
+					<script><![CDATA[
+						import org.codehaus.plexus.util.FileUtils;
+						FileUtils.fileWrite( "touched.txt", "This is a Beanshell Maven Plugin POM test" );
+					]]></script>
+	            </configuration>
+	          </execution>
+	          <execution>
+	            [...]
+	          </execution>
+	          [...]
+	        </executions>
+	      </plugin>
+	      [...]
+	    </plugins>
+	    [...]
+	  </build>
+	  [...]
+	</project>

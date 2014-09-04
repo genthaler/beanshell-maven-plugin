@@ -1,0 +1,10 @@
+Command line usage
+------------------
+
+This example shows how to run a beanshell file from the command line.
+
+	mvn ${project.groupId}:${project.artifactId}:${project.version}:run -Dbsh.file="touch.bsh"
+
+where the contents of the script file might be:
+
+	org.codehaus.plexus.util.FileUtils.fileWrite( "touched.txt", "This is a Beanshell test" );

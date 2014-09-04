@@ -1,0 +1,40 @@
+${project.name}
+------------------------
+
+This is simply a plugin to execute arbitrary [BeanShell](http://http://www.beanshell.org).
+
+It provides much of the same functionality as the [script-maven-plugin](http://github.com/alexec/script-maven-plugin).
+It requires a bit less configuration than that, but the main reason for its existence is to write a beanshell-maven-plugin
+using the [beanshell-maven-plugin-archetype](http://genthaler.github.io/beanshell-maven-plugin-archetype).
+
+So basically this is a Maven plugin that executes BeanShell scripts using the BeanShell Maven scripting support. It's all very meta.
+
+Goals Overview
+--------------
+
+- [bsh:run](./run-mojo.html) run a BeanShell script either via a script tag or a file.
+- [bsh:help](./help-mojo.html) get help.
+
+Usage
+-----
+
+General instructions on how to use the ${project.name} can be found on the [usage page](./usage.html).
+
+In case you still have questions regarding the plugin's usage, please feel
+free to contact the [user mailing list](./mail-lists.html). The posts to the mailing list are archived and could
+already contain the answer to your question as part of an older thread. Hence, it is also worth browsing/searching
+the [mail archive](./mail-lists.html).
+
+If you feel like the plugin is missing a feature or has a defect, you can fill a feature request or bug report in our
+[issue tracker](./issue-tracking.html). When creating a new issue, please provide a comprehensive description of your
+concern. Especially for fixing bugs it is crucial that the developers can reproduce your problem. For this reason,
+entire debug logs, POMs or most preferably little demo projects attached to the issue are very much appreciated.
+Of course, patches are most welcome too. Contributors can check out the project from our
+[source repository](./source-repository.html) and will find supplementary information in the
+[guide to helping with Maven](http://maven.apache.org/guides/development/guide-helping.html).
+
+Examples
+--------
+
+- [Embedded script tag.](./examples/script.html)
+- [Command line usage.](./examples/cli.html)

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--
+	#%L
+  Beanshell Maven Plugin
+  %%
+  Copyright (C) 2014 Günther Enthaler
+  %%
+  Licensed under the Apache License, Version 2.0 (the "License");
+  	you may not use this file except in compliance with the License.
+  	You may obtain a copy of the License at
+  	http://www.apache.org/licenses/LICENSE-2.0
+  	Unless required by applicable law or agreed to in writing, software
+  	distributed under the License is distributed on an "AS IS" BASIS,
+  	WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  	See the License for the specific language governing permissions and
+  	limitations under the License.
+  #L%
+-->
+<project xmlns="http://maven.apache.org/DECORATION/1.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/DECORATION/1.0.0 http://maven.apache.org/xsd/decoration-1.0.0.xsd">
+	<skin>
+		<groupId>org.apache.maven.skins</groupId>
+		<artifactId>maven-fluido-skin</artifactId>
+		<version>1.3.0</version>
+	</skin>
+	<custom>
+		<fluidoSkin>
+			<topBarEnabled>true</topBarEnabled>
+			<sideBarEnabled>true</sideBarEnabled>
+			<!-- <topBarEnabled>true</topBarEnabled> -->
+			<!-- <topBarIcon> -->
+			<!-- <name>Maven Fluido Skin</name> -->
+			<!-- <alt>Maven Fluido Skin</alt> -->
+			<!-- <src>/images/topbar-logo.png</src> -->
+			<!-- <href>/index.html</href> -->
+			<!-- </topBarIcon> -->
+			<topBarEnabled>true</topBarEnabled>
+			<topBarContainerStyle>width: 90%;</topBarContainerStyle>
+			<topBarEnabled>true</topBarEnabled>
+			<navBarStyle>navbar-inverse</navBarStyle>
+			<leftColumnClass>span2</leftColumnClass>
+			<bodyColumnClass>span10</bodyColumnClass>
+			<sourceLineNumbersEnabled>true</sourceLineNumbersEnabled>
+			<gitHub>
+				<projectId>genthaler/${artifactId}</projectId>
+				<ribbonOrientation>right</ribbonOrientation>
+				<!-- <ribbonColor>black</ribbonColor> -->
+			</gitHub>
+			<twitter>
+				<user>genthaler</user>
+				<!-- <showUser>false</showUser> -->
+				<!-- <showFollowers>true</showFollowers> -->
+			</twitter>
+			<!-- <ohloh> -->
+			<!-- <projectId>643400</projectId> -->
+			<!-- <widget>partner-badge</widget> -->
+			<!-- </ohloh> -->
+			<facebookLike />
+			<googlePlusOne />
+		</fluidoSkin>
+	</custom>
+	<body>
+		<menu name="Overview">
+			<item name="Introduction" href="index.html" />
+			<item name="Usage" href="usage.html" />
+			<item name="Goals" href="plugin-info.html" />
+			<item name="FAQ" href="faq.html" />
+			<item name="Links" href="links.html" />
+		</menu>
+		<menu name="Examples">
+			<item name="Running a BeanShell in a script tag" href="examples/script.html" />
+			<item name="Running a BeanShell script file from the command line" href="examples/cli.html" />
+		</menu>
+		<menu ref="reports" />
+	</body>
+</project>

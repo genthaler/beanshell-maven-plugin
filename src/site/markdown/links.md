@@ -1,8 +1,5 @@
-### BeanShell Maven Plugin
-
-Please see the [Project Documentation](http://genthaler.github.com/beanshell-maven-plugin)
-
-#### Links
+Useful links
+------------
 
 * [Maven Plugin Plugin - Writing a Beanshell Maven Plugin](http://maven.apache.org/plugin-tools/maven-plugin-plugin/examples/beanshell-mojo.html)
 * [Maven Beanshell Mojo Support - About](http://maven.apache.org/plugin-tools/maven-script/maven-script-beanshell/)
@@ -12,15 +9,3 @@ Please see the [Project Documentation](http://genthaler.github.com/beanshell-mav
 * [MaestroDev | Developing your First Mojo](http://www.maestrodev.com/better-builds-with-maven/developing-custom-maven-plugins/developing-your-first-mojo/)
 * [Maven Plugin Plugin - Introduction.html](http://maven.apache.org/plugin-tools/maven-plugin-plugin)
 * [BeanShell - Lightweight Scripting for Java](http://www.beanshell.org/)
-
-
-/**
- * The containing MavenProject, if any.
- *
- * @parameter expression="${project}" type="org.apache.maven.project.MavenProject"
- * @readonly
- */
-setProject( MavenProject p )
-{
-	project = p
-}

@@ -1,0 +1,8 @@
+language: java
+jdk: oraclejdk7
+env: MAVEN_OPTS="-Xmx512m -XX:MaxPermSize=128m"
+install: mvn dependency:resolve
+script: mvn clean verify
+branches:
+  only:
+    - master

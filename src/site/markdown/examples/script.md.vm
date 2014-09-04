@@ -1,0 +1,31 @@
+Executions
+----------
+
+The following configuration shows how to look up a username/password from your `~/.m2/settings.xml`.
+
+You can then use these credentials in your pom e.g. in a Jetty JNDI definition, or as a system property in a unit test.
+
+	<project>
+	  [...]
+	  <build>
+	    [...]
+	    <plugins>
+	      <plugin>
+	        <groupId>${project.groupId}</groupId>
+	        <artifactId>${project.artifactId}</artifactId>
+	        <version>${project.version}</version>
+
+	        <configuration>
+				<script><![CDATA[
+					import org.codehaus.plexus.util.FileUtils;
+					FileUtils.fileWrite( "touched.txt", "This is a Beanshell Maven Plugin POM test" );
+				]]></script>
+	        </configuration>
+
+	      </plugin>
+	      [...]
+	    </plugins>
+	    [...]
+	  </build>
+	  [...]
+	</project>
