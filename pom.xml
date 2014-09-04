@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.github.genthaler</groupId>
 	<artifactId>beanshell-maven-plugin</artifactId>
@@ -392,11 +391,6 @@
 					<!-- </goals> -->
 					<!-- </execution> -->
 				</executions>
-				<configuration>
-					<goalPrefix>bsh</goalPrefix>
-					<helpPackageName>com.github.genthaler.help</helpPackageName>
-					<skipErrorNoDescriptorsFound>true</skipErrorNoDescriptorsFound>
-				</configuration>
 				<dependencies>
 					<dependency>
 						<groupId>org.apache.maven.plugin-tools</groupId>
@@ -404,6 +398,11 @@
 						<version>3.2</version>
 					</dependency>
 				</dependencies>
+				<configuration>
+					<goalPrefix>bsh</goalPrefix>
+					<helpPackageName>com.github.genthaler.help</helpPackageName>
+					<skipErrorNoDescriptorsFound>true</skipErrorNoDescriptorsFound>
+				</configuration>
 			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
@@ -443,9 +442,6 @@
 			</plugin>
 			<plugin>
 				<artifactId>maven-site-plugin</artifactId>
-				<configuration>
-					<skipDeploy>true</skipDeploy>
-				</configuration>
 				<dependencies>
 					<dependency>
 						<groupId>org.apache.maven.doxia</groupId>
@@ -453,6 +449,9 @@
 						<version>1.4</version>
 					</dependency>
 				</dependencies>
+				<configuration>
+					<skipDeploy>true</skipDeploy>
+				</configuration>
 			</plugin>
 			<plugin>
 				<artifactId>maven-surefire-report-plugin</artifactId>
@@ -564,24 +563,6 @@
 	<profiles>
 		<profile>
 			<id>github</id>
-			<distributionManagement>
-				<repository>
-					<id>github</id>
-					<name>GitHub ${project.artifactId} Repository</name>
-					<url>https://raw.github.com/genthaler/${project.artifactId}/mvn-repo</url>
-				</repository>
-				<snapshotRepository>
-					<id>github</id>
-					<name>GitHub ${project.artifactId} Repository</name>
-					<url>https://raw.github.com/genthaler/${project.artifactId}/mvn-repo</url>
-				</snapshotRepository>
-				<site>
-					<id>github</id>
-					<name>GitHub</name>
-					<url>http://genthaler.github.io/${project.artifactId}/</url>
-				</site>
-				<downloadUrl>https://raw.github.com/genthaler/${project.artifactId}/mvn-repo/com/github/genthaler/${project.artifactId}/${project.version}/${project.artifactId}-${project.version}.jar</downloadUrl>
-			</distributionManagement>
 			<build>
 				<plugins>
 					<plugin>
@@ -653,6 +634,24 @@
 					</plugin>
 				</plugins>
 			</build>
+			<distributionManagement>
+				<repository>
+					<id>github</id>
+					<name>GitHub ${project.artifactId} Repository</name>
+					<url>https://raw.github.com/genthaler/${project.artifactId}/mvn-repo</url>
+				</repository>
+				<snapshotRepository>
+					<id>github</id>
+					<name>GitHub ${project.artifactId} Repository</name>
+					<url>https://raw.github.com/genthaler/${project.artifactId}/mvn-repo</url>
+				</snapshotRepository>
+				<site>
+					<id>github</id>
+					<name>GitHub</name>
+					<url>http://genthaler.github.io/${project.artifactId}/</url>
+				</site>
+				<downloadUrl>https://raw.github.com/genthaler/${project.artifactId}/mvn-repo/com/github/genthaler/${project.artifactId}/${project.version}/${project.artifactId}-${project.version}.jar</downloadUrl>
+			</distributionManagement>
 			<reporting>
 				<plugins>
 					<plugin>
