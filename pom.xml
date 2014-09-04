@@ -535,16 +535,6 @@
 			<plugin>
 				<artifactId>maven-pmd-plugin</artifactId>
 			</plugin>
-			<!-- <plugin> -->
-			<!-- <groupId>org.codehaus.mojo</groupId> -->
-			<!-- <artifactId>findbugs-maven-plugin</artifactId> -->
-			<!-- <configuration> -->
-			<!-- <includeTests>true</includeTests> -->
-			<!-- <excludeFilterFile>${project.build.testOutputDirectory}/findbugs-filter.xml</excludeFilterFile> -->
-			<!-- <threshold>Default</threshold> -->
-			<!-- <effort>Max</effort> -->
-			<!-- </configuration> -->
-			<!-- </plugin> -->
 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
 				<artifactId>versions-maven-plugin</artifactId>
