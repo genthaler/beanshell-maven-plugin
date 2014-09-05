@@ -38,13 +38,6 @@
 			</properties>
 		</developer>
 	</developers>
-	<mailingLists>
-		<mailingList>
-			<name>BeanShell Maven Plugin Google Group</name>
-			<subscribe>http://groups.google.com/group/beanshell-maven-plugin/subscribe</subscribe>
-			<archive>http://groups.google.com/group/beanshell-maven-plugin</archive>
-		</mailingList>
-	</mailingLists>
 	<prerequisites>
 		<maven>3.0</maven>
 	</prerequisites>
