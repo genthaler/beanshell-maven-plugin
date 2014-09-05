@@ -1,9 +1,7 @@
-Executions
+POM script tag
 ----------
 
-The following configuration shows how to look up a username/password from your `~/.m2/settings.xml`.
-
-You can then use these credentials in your pom e.g. in a Jetty JNDI definition, or as a system property in a unit test.
+You need to specify either a script or a file, if you want anything to happen.
 
 	<project>
 	  [...]
