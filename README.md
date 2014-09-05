@@ -12,15 +12,3 @@ Please see the [Project Documentation](http://genthaler.github.com/beanshell-mav
 * [MaestroDev | Developing your First Mojo](http://www.maestrodev.com/better-builds-with-maven/developing-custom-maven-plugins/developing-your-first-mojo/)
 * [Maven Plugin Plugin - Introduction.html](http://maven.apache.org/plugin-tools/maven-plugin-plugin)
 * [BeanShell - Lightweight Scripting for Java](http://www.beanshell.org/)
-
-
-/**
- * The containing MavenProject, if any.
- *
- * @parameter expression="${project}" type="org.apache.maven.project.MavenProject"
- * @readonly
- */
-setProject( MavenProject p )
-{
-	project = p
-}
