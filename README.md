@@ -1,6 +1,6 @@
 ### BeanShell Maven Plugin
 
-Please see the [Project Documentation](http://genthaler.github.com/beanshell-maven-plugin)
+Please see the [Project Documentation](http://genthaler.github.io/beanshell-maven-plugin)
 
 #### Links
 
