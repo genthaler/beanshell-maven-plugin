@@ -8,7 +8,7 @@
 	</parent>
 	<groupId>com.github.genthaler</groupId>
 	<artifactId>beanshell-maven-plugin</artifactId>
-	<version>1.0</version>
+	<version>1.1-SNAPSHOT</version>
 	<packaging>maven-plugin</packaging>
 	<name>Beanshell Maven Plugin</name>
 	<description>Maven plugin to execute arbitrary BeanShell script</description>
