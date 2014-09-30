@@ -12,7 +12,7 @@
 	<name>Beanshell Maven Plugin</name>
 	<description>Maven plugin to execute arbitrary BeanShell script</description>
 	<!-- FIXME change it to the project's website -->
-	<url>http://github.com/genthaler/${project.artifactId}/</url>
+	<url>http://genthaler.github.io/${project.artifactId}/</url>
 	<inceptionYear>2014</inceptionYear>
 	<scm>
 		<connection>scm:git:https://github.com/genthaler/${project.artifactId}.git</connection>
