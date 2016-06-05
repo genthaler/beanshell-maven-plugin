@@ -6,3 +6,4 @@ script: mvn clean verify
 branches:
   only:
     - master
+sudo: false
