@@ -7,7 +7,7 @@
 		<version>5</version>
 	</parent>
 	<artifactId>beanshell-maven-plugin</artifactId>
-	<version>1.1-SNAPSHOT</version>
+	<version>1.1</version>
 	<packaging>maven-plugin</packaging>
 	<name>Beanshell Maven Plugin</name>
 	<description>Maven plugin to execute arbitrary BeanShell script</description>
@@ -17,7 +17,7 @@
 	<scm>
 		<connection>scm:git:https://github.com/genthaler/${project.artifactId}.git</connection>
 		<developerConnection>scm:git:https://github.com/genthaler/${project.artifactId}.git</developerConnection>
-		<tag>HEAD</tag>
+		<tag>beanshell-maven-plugin-1.1</tag>
 		<url>https://github.com/genthaler/${project.artifactId}</url>
 	</scm>
 	<dependencies>
