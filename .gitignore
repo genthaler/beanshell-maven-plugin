@@ -4,5 +4,8 @@
 /.project
 *.bak
 *.versionsBackup
-
 release.properties
+*.prefs
+.c9revisions
+release.properties
+*.releaseBackup
