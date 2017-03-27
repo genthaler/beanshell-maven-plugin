@@ -2,7 +2,7 @@
  * #%L
  * Beanshell Maven Plugin
  * %%
- * Copyright (C) 2014 - 2016 Günther Enthaler
+ * Copyright (C) 2014 - 2017 Günther Enthaler
  * %%
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -43,7 +43,12 @@ execute()
         logger.info( "interpreting file " + file);
     	this.interpreter.source(file);
     } else if (script.getClass() == String.class) {
-        logger.info( "evaluating script " + script);
+        if (quiet.getClass() == String.class && Boolean.valueOf(quiet)) {
+            String[] scriptLines = script.split("\\n");
+            logger.info( "evaluating script " + scriptLines[0] + " [+ " + (scriptLines.length - 1) + " omitted line(s)]" );
+        } else {
+            logger.info( "evaluating script " + script);
+        }
     	this.interpreter.eval(script);
     }
 }
@@ -66,6 +71,16 @@ setScript( String s )
 setFile( File f )
 {
     file = f;
+}
+
+/**
+ * Quiet mode: only show the first line of the script to evaluate
+ *
+ * @parameter expression="${bsh.quiet}" type="java.lang.String" default-value="false"
+ */
+setQuiet( String s )
+{
+    quiet = s;
 }
 
 /**
