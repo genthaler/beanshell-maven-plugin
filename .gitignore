@@ -9,3 +9,4 @@ release.properties
 .c9revisions
 *.releaseBackup
 /beanshell-maven-plugin.iml
+.DS_Store
