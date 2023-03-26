@@ -7,5 +7,5 @@
 release.properties
 *.prefs
 .c9revisions
-release.properties
 *.releaseBackup
+/beanshell-maven-plugin.iml
